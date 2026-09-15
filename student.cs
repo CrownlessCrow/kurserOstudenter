@@ -16,7 +16,7 @@ public class Student
 public void Enroll(Course course)
 {
     if (Courses.Contains(course)) return;
-    if (course.Students.Count >= course.Capacity) return;
+    if (course.Students.Count >= course.MaxSeats) return;
 
     Courses.Add(course);
     course.AddStudent(this);

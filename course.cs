@@ -4,14 +4,14 @@ public class Course
     public List<Student> Students = new List<Student>();
 
     public string Name = "";
-    public int Capacity;
+    public int MaxSeats;
 
     
         public Course(string name, int capacity)
 
         {
             this.Name = name;
-            this.Capacity = capacity;
+            this.MaxSeats = capacity;
         }
 
 
@@ -19,7 +19,7 @@ public void AddStudent(Student student)
 
     {
         if (Students.Contains(student)) return;
-        if (Students.Count >= Capacity) return;
+        if (Students.Count >= MaxSeats) return;
 
         Students.Add(student);
         student.Enroll(this);
@@ -44,6 +44,11 @@ public void RollCall()
         }
     }
 
+public override string ToString()
+
+    {
+        return Name + " (" + Students.Count + "/" + MaxSeats + " platser)";
+    }
 
 
 }
