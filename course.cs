@@ -32,4 +32,18 @@ public void RemoveStudent(Student student)
             student.Unenroll(this);
         }
     } 
+public void RollCall()
+
+    {
+        Console.WriteLine("Roll call for " + Name + ":");
+
+        foreach (Student student in Students)
+
+        {
+            Console.WriteLine(student.Name);
+        }
+    }
+
+
+
 }
