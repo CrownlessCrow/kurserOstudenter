@@ -15,23 +15,23 @@ public class Course
         }
 
 
-public void AddStudent(Student student)
+public void Enroll(Student student)
 
     {
         if (Students.Contains(student)) return;
         if (Students.Count >= MaxSeats) return;
 
         Students.Add(student);
-        student.Enroll(this);
+        if (!student.Courses.Contains(this)) student.Courses.Add(this);
     }
-public void RemoveStudent(Student student)
-    { 
+public void Remove(Student student)
+    {
         if (Students.Contains(student))
         {
             Students.Remove(student);
-            student.Unenroll(this);
+            if (student.Courses.Contains(this)) student.Courses.Remove(this);
         }
-    } 
+    }
 public void RollCall()
 
     {
