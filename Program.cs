@@ -1,5 +1,5 @@
 ﻿Course matte = new Course("Matematik", 2);
-Student Martin = new Student("Martin");
+Student anna = new Student("Anna");
 
-anna.Enroll(matte);
-Console.WriteLine(matte.Students.Count);  
+
+anna.Schedule();

@@ -29,8 +29,21 @@ public void Unenroll(Course course)
                 Courses.Remove(course);
                 course.RemoveStudent(this);
         }
-
 }
+public void Schedule()
+        {
+                Console.WriteLine(Name + " is enrolled in:");
+
+                foreach (Course course in Courses)
+
+                {
+                        Console.WriteLine(course.Name);
+                }
+
+
+
+        }
+
 
             
 }   

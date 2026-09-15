@@ -25,10 +25,11 @@ public void AddStudent(Student student)
         student.Enroll(this);
     }
 public void RemoveStudent(Student student)
-    {
+    { 
         if (Students.Contains(student))
-    
-        Students.Remove(student);
-        student.Unenroll(this);
-    }
-} 
+        {
+            Students.Remove(student);
+            student.Unenroll(this);
+        }
+    } 
+}
