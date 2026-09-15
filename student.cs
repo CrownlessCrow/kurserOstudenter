@@ -22,9 +22,18 @@ public void Enroll(Course course)
 
 
 }
+public void Unenroll(Course course) 
+{
+        if (Courses.Contains(course))
+        {
+                Courses.Remove(course);
+                course.RemoveStudent(this);
+        }
+
+}
 
             
-        }   
+}   
     
 
 
