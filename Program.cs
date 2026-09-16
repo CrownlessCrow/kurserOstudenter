@@ -35,3 +35,4 @@ Console.WriteLine("=== Vanlig borttagning ===");
 martin.Leave(programmering);
 programmering.RollCall();          // bara Sara kvar
 martin.Schedule();                 // tom lista
+
